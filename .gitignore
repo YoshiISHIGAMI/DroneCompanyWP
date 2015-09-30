@@ -11,6 +11,7 @@ wp-content/themes/twentyfourteen/
 wp-content/themes/twentythirteen/
 wp-content/themes/samplecorporation/img/
 
+.htaccess
 index.php
 license.txt
 readme.html
