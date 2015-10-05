@@ -8,9 +8,14 @@
 
 <?php get_header(); //header.phpを取得 ?>
 
-<div id="main" class="cfx">
+<section id="contents">
 
-	<div id="left-column">
+
+<div class="container">
+<div class="row">
+
+
+	<div id="main" class="col-md-8">
 	
 	<?php if ( have_posts() ) : // ループ開始　投稿があるなら ?>
 		
@@ -34,12 +39,16 @@
 	
 	</div>
 	
-	<div id="right-column">
+	<div id="side" class="col-md-4">
 	
 		<?php get_sidebar(); //sidebar.phpを取得 ?>
 	
 	</div>
+
 	
-</div>
+
+<!--/row--></div>
+<!--/container--></div>
+<!--/#main_contents--></section>
 	
-<?php get_footer(); //footer.phpを取得　PHPで終了するので閉じタグは不要です
+<?php get_footer(); 

@@ -38,6 +38,9 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header collapsed">
+      <a class="navbar-brand" href="/">
+        <img src="/_asset/img/site_logo<?php if (is_front_page()): ?>_w<?php endif; ?>.png" alt="JDRA">
+      </a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi" aria-expanded="false" id="btn-toggle-gnavi">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -50,11 +53,21 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div  class="collapse navbar-collapse" id="gnavi">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#service">SERVICE</a></li>
+        <?php if (is_front_page()): ?>
+        <li><a href="/#service">SERVICE</a></li>
+        <li><a href="/category/articles/">ARTICLES</a></li>
         <li><a href="#works">WORKS</a></li>
         <li><a href="#news">NEWS</a></li>
-        <li><a href="#company">COMPANY</a></li>
+        <li><a href="/#aboutus">ABOUT US</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <?php else : ?>
+        <li><a href="/#service">SERVICE</a></li>
+        <li><a href="/category/articles/">ARTICLES</a></li>
+        <li><a href="/category/works/">WORKS</a></li>
+        <li><a href="/category/news/">NEWS</a></li>
+        <li><a href="/#aboutus">ABOUT US</a></li>
+        <li><a href="/#contact">CONTACT</a></li>
+        <?php endif; ?>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -86,4 +99,4 @@
         <p class="btn_contact-main"><a href="#contact" class="btn btn-lg btn_contact anchor">お問い合せ</a></p>
       </div>
     </div>
-  </header><?php else : ?>ほげ<?php endif; ?>
+  </header><?php else : ?><?php endif; ?>

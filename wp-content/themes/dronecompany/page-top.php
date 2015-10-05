@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h3>空撮</h3>
+          <h3>ドローンレース</h3>
           <div class="cont_body">
             <p>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</p>
             <p>いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい。</p>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <h3>ドローン操縦者派遣</h3>
+          <h3>体験会</h3>
           <div class="cont_body">
             <p>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ。</p>
             <p>いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい。</p>
@@ -48,8 +48,8 @@
     </div>
   <!-- /works --></section>
 
-  <section id="company" class="content">
-    <h2><img src="_asset/img/h2_company.png" height="75" width="207" alt="COMPANY"></h2>
+  <section id="aboutus" class="content">
+    <h2><img src="/_asset/img/h2_aboutus.png" height="75" width="214" alt="ABOUT US"></h2>
 
     <div class="container">
       <div class="row">
@@ -58,16 +58,16 @@
           <div class="cont_body">
             <table class="profile_company">
             <tr>
-              <th>会社名</th>
-              <td>ドローンソリューション株式会社</td>
+              <th>団体名</th>
+              <td>日本ドローンレース協会</td>
             </tr>
             <tr>
               <th>設立</th>
-              <td>2015年8月31日</td>
+              <td>2015年2月</td>
             </tr>
             <tr>
-              <th>代表取締役</th>
-              <td>田中 いちろう</td>
+              <th>代表理事</th>
+              <td>小寺 悠</td>
             </tr>
             <tr>
               <th>所在地</th>
@@ -75,11 +75,11 @@
             </tr>
             <tr>
               <th>事業内容</th>
-              <td>空撮、ドローン操縦者の派遣</td>
+              <td>ドローンレースの開催</td>
             </tr>
             <tr>
               <th>URL</th>
-              <td><a href="http://drone-br.ibf-cola.com/">http://drone-br.ibf-cola.com/</a></td>
+              <td><a href="http://jdra.or.jp/">http://jdra.or.jp</a></td>
             </tr>
             </table>
           </div>
@@ -95,7 +95,10 @@
         <ul class="list_news">
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <li>
-          <a href="<?php the_permalink(); ?>"><?php the_time('Y.m.j') ?><br><?php the_title(); ?></a>
+          <a href="<?php the_permalink(); ?>">
+            <span class="date"><?php the_time('Y.m.j') ?></span>
+            <span class="title"><?php the_title(); ?></span>
+          </a>
         </li>
 				<?php endwhile; ?>
 			</ul>
@@ -121,7 +124,7 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'DRONE SOLUTIONS inc.'
+          title: '日本ドローンレース協会'
         });
         marker.setMap(map);
       }
@@ -130,8 +133,7 @@
   <section id="contact" class="content bg_wht">
     <h2><img src="_asset/img/h2_contact.png" height="75" width="196" alt="CONTACT"></h2>
     <div class="container">
-    <p>ドローンソリューション株式会社は、ドローンにまつわる様々なソリューションを提供しております。</p>
-    <p>詳細は下記フォームから、お気軽にお問い合わせください。</p>
+    <p>下記フォームから、お気軽にお問い合わせください。</p>
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
   <?php the_content(); ?>

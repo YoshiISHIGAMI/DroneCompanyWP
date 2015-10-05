@@ -8,9 +8,14 @@
 
 <?php get_header(); //header.phpを取得 ?>
 
-<div id="main" class="cfx">
+<section id="contents">
 
-	<div id="left-column">
+
+<div class="container">
+<div class="row">
+
+
+	<div id="main" class="col-md-8">
 	
 	<?php if ( have_posts() ) : // ループ開始　投稿があるなら ?>
 		
@@ -18,18 +23,22 @@
 	
 			<div <?php post_class(); //CSSカスタム用のクラスを付加（投稿ID、投稿タイプなど） ?>>
 			
-				<h1 class="page-title"><?php the_title(); //投稿（固定ページ）のタイトルを表示 ?></h1>
-				<div class="page-meta">投稿日：<?php the_time('Y.m.j');//投稿日時を表示 パラメータで書式を指定 ?>　｜　カテゴリー：　<?php the_category(','); //投稿の属するカテゴリー名を全て表示 パラメータで区切り文字を指定 ?></div>
-				<div class="page-content"><?php the_content(); //投稿（固定ページ）の本文を表示 ?></div>
+				<h1 class="page-title"><?php the_title(); ?></h1>
+        
+				<div class="page-meta"><?php the_time('Y.m.j'); ?><?php /*the_category(',');*/ ?></div>
+
+        <div class="page-content">
+          <?php the_content(); ?>
+        </div>
 			
 			</div>
 	
-			<div id="post-link" class="cfx">
-				<p id="post-link-prev"><?php previous_post_link('%link', '前の記事へ' ); //前の記事へのリンクを表示 ?></p>
-				<p id="post-link-next"><?php next_post_link('%link', '新しい記事へ' ); //次の記事へのリンクを表示 ?></p>
+			<div id="post-link" class="clearfix">
+				<p id="post-link-prev"><?php previous_post_link('%link', '< 前の記事へ' ); ?></p>
+				<p id="post-link-next"><?php next_post_link('%link', '新しい記事へ >' ); ?></p>
 			</div>
 		
-			<div id="comment-container"><?php comments_template(); //WordPressデフォルトのコメントテンプレートを表示(このテーマは解説の都合によりcomments.phpがありませんがWordPress Ver3.0からcomments.phpのないテーマは非推奨となりました。) ?></div>
+			<?php /*comments_template();*/ ?>
 	
 		<?php endwhile; // 繰り返し終了 ?>	
 				
@@ -42,12 +51,15 @@
 	
 	</div>
 	
-	<div id="right-column">
+	<div id="side" class="col-md-4">
 	
 		<?php get_sidebar(); //sidebar.phpを取得 ?>
 	
 	</div>
+
+
+<!--/row--></div>
+<!--/container--></div>
+<!--/#main_contents--></section>
 	
-</div>
-	
-<?php get_footer(); //footer.phpを取得　PHPで終了するので閉じタグは不要です
+<?php get_footer();

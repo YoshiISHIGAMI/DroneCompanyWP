@@ -8,7 +8,7 @@
 
 <?php get_header(); //header.phpを取得 ?>
 
-<div id="main" class="cfx">
+<div id="main" class="clearfix">
 
 	<div id="left-column">
 	
