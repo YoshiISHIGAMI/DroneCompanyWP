@@ -17,10 +17,10 @@ add_theme_support( 'post-thumbnails' );
  * カスタムメニューの機能を有効化します。
  */
 
-if ( function_exists( 'register_nav_menu' ) ) {
+/*if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'simplenav', 'Sample Corporationグローバルナビ' );
 }
-
+*/
 
 
 
