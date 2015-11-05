@@ -39,7 +39,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header collapsed">
       <a class="navbar-brand" href="/">
-        <img src="/_asset/img/site_logo<?php if (is_front_page()): ?>_w<?php endif; ?>.png" alt="JDRA">
+        <img src="/_asset/img/site_logo<?php if (is_front_page()): ?>_w<?php endif; ?>.png" alt="<?php bloginfo( 'name' ); ?>">
       </a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi" aria-expanded="false" id="btn-toggle-gnavi">
         <span class="sr-only">Toggle navigation</span>
@@ -54,11 +54,10 @@
     <div  class="collapse navbar-collapse" id="gnavi">
       <ul class="nav navbar-nav navbar-right">
         <?php if (is_front_page()): ?>
-        <li><a href="#articles/">ARTICLES</a></li>
-        <li><a href="#works">WORKS</a></li>
-        <li><a href="#news">NEWS</a></li>
+        <li><a href="/#works">WORKS</a></li>
+        <li><a href="/#news">NEWS</a></li>
         <li><a href="/#aboutus">ABOUT US</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="/#contact">CONTACT</a></li>
         <?php else : ?>
         <li><a href="/category/articles/">ARTICLES</a></li>
         <li><a href="/category/works/">WORKS</a></li>
@@ -92,8 +91,8 @@
 
     <div class="container">
       <div class="row">
-        <h1 id="logo"><img src="_asset/img/logo.png" alt="DRONE SOLUTIONS"></h1>
-        <p class="copy"><?php bloginfo( 'description' ); ?></p>
+        <!--h1 id="logo"><img src="_asset/img/logo.png" alt="<?php bloginfo( 'name' ); ?>"></h1-->
+        <p class="copy"><img src="_asset/img/copy.png" alt="<?php bloginfo( 'description' ); ?>"></p>
         <p class="btn_contact-main"><a href="#contact" class="btn btn-lg btn_contact anchor">お問い合せ</a></p>
       </div>
     </div>
